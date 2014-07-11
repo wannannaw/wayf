@@ -1,6 +1,5 @@
 wayf
 ====
-
 World at your fingers
 
-wannannaw
+copyright wannannaw
