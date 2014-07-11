@@ -1,0 +1,2 @@
+double dfnCalculateDrinkingWaterLevel(double dDrinkingWaterLevel,
+		double dDrinkingWaterMaintenanceCosts, double dDrinkingWaterBudgetExpenses);
