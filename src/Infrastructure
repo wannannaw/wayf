@@ -1,0 +1,72 @@
+	//0=urban,1=rural,2=agriculture,3=energy,4=Raw Materials,5=Industrial,6=Finished,7=Services  -- rural <2k urbaan >2k < 75k
+	//20=cereals,21=vegetables,22=meat,23=dairy,24=tobacco,25=drugs
+	//30=solar,31=wind,32=natural gas,33=fossil fuels
+	//40=wood,41=minerals,42=iron and steel, 43=precious stones
+	//50=fabrics,51=plastics,52=chemicals,53=pharmaceuticals
+	//60=appliances,61=vehicles,62=machinery,63=commodoties,64=luxury commodoties
+	//70=construction,71=engineering,72=health,73=retail,74=legal,75=marketing
+
+
+Hard Infrastructure
+Transport infrastructure
+    Road and highway networks, including structures (bridges, tunnels, culverts, retaining walls), signage and markings, electrical systems (street lighting and traffic lights), edge treatments (curbs, sidewalks, landscaping), and specialized facilities such as road maintenance depots and rest areas
+    Mass transit systems (Commuter rail systems, subways, tramways, trolleys, City Bicycle Sharing system, City Car Sharing system and bus transportation)
+    Railways, including structures, terminal facilities (rail yards, railway stations), level crossings, signalling and communications systems
+    Canals and navigable waterways requiring continuous maintenance (dredging, etc.)
+    Seaports and lighthouses
+    Airports, including air navigational systems
+
+Energy infrastructure
+    Electrical power network, including generation plants, electrical grid, substations, and local distribution.
+    Natural gas pipelines, storage and distribution terminals, as well as the local distribution network. Some definitions may include the gas wells, as well as the fleets of ships and trucks transporting liquefied gas.
+    Petroleum pipelines, including associated storage and distribution terminals. Some definitions may include the oil wells, refineries, as well as the fleets of tanker ships and trucks.
+    Coal handling facilities for washing, storing, and transporting coal. Some definitions may include Coal mines.
+	Solar
+	Wind
+
+Water management infrastructure
+    Drinking water supply, including the system of pipes, storage reservoirs, pumps, valves, filtration and treatment equipment and meters, including buildings and structures to house the equipment, used for the collection, treatment and distribution of drinking water
+    Sewage collection, and disposal of waste water
+    Drainage systems (storm sewers, ditches, etc.)
+    Major irrigation systems (reservoirs, irrigation canals)
+    Major flood control systems (dikes, levees, major pumping stations and floodgates)
+
+Communications infrastructure
+    Postal service, including sorting facilities
+    Telephone networks (land lines) including telephone exchange systems
+    Mobile phone networks
+    Television and radio transmission stations, including the regulations and standards governing broadcasting
+    The Internet, including the internet backbone, core routers and server farms, local internet service providers as well as the protocols and other basic software required for the system to function (does not include specific websites, although may include some widely used web-based services, such as social network services and web search engines)
+    Communications satellites
+
+Solid waste management
+    Municipal garbage and recyclables collection
+    Solid waste landfills
+    Solid waste incinerators and plasma gasification facilities
+    Materials recovery facilities
+    Hazardous waste disposal facilities
+
+Types of soft infrastructure
+
+
+Soft Infrastructure
+Governance infrastructure
+    The system of government and law enforcement, including the political, legislative, law enforcement, justice and penal systems, as well as specialized facilities (government offices, courthouses, prisons, etc.), and specialized systems for collecting, storing and disseminating data, laws and regulation
+    Emergency services, such as police, fire protection, and ambulances, including specialized vehicles, buildings, communications and dispatching systems
+    Military infrastructure, including military bases, arms depots, training facilities, command centers, communication facilities, major weapons systems, fortifications, specialised arms manufacturing, strategic reserves
+
+Economic infrastructure
+    The financial system, including the banking system, financial institutions, the payment system, exchanges, the money supply, financial regulations, as well as accounting standards and regulations
+    Major business logistics facilities and systems, including warehouses as well as warehousing and shipping management systems
+    Manufacturing infrastructure, including industrial parks and special economic zones, mines and processing plants for basic materials used as inputs in industry, specialized energy, transportation and water infrastructure used by industry, plus the public safety, zoning and environmental laws and regulations that govern and limit industrial activity, and standards organizations
+    Agricultural, forestry and fisheries infrastructure, including specialized food and livestock transportation and storage facilities, major feedlots, agricultural price support systems (including agricultural insurance), agricultural health standards, food inspection, experimental farms and agricultural research centers and schools, the system of licencing and quota management, enforcement systems against poaching, forest wardens, and fire fighting
+
+Social infrastructure
+    The health care system, including hospitals, the financing of health care, including health insurance, the systems for regulation and testing of medications and medical procedures, the system for training, inspection and professional discipline of doctors and other medical professionals, public health monitoring and regulations, as well as coordination of measures taken during public health emergencies such as epidemics
+    The educational and research system, including elementary and secondary schools, universities, specialised colleges, research institutions, the systems for financing and accrediting educational institutions
+    Social welfare systems, including both government support and private charity for the poor, for people in distress or victims of abuse.
+
+Cultural, sports and recreational infrastructure
+    Sports and recreational infrastructure, such as parks, sports facilities, the system of sports leagues and associations
+    Cultural infrastructure, such as concert halls, museums, libraries, theatres, studios (film studios and recording studios), and specialized training facilities
+    Business travel and tourism infrastructure, including both man-made and natural attractions, convention centers, hotels, restaurants, amusement parks, and other services that cater mainly to tourists and business travelers, as well as the systems for informing and attracting tourists, and travel insurance

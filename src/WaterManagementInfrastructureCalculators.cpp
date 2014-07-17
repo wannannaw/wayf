@@ -1,4 +1,4 @@
-#include "CalculateDrinkingWaterLevel.h"
+#include "WaterManagementInfrastructureCalculators.h"
 
 //Function calculates the drinking water level
 double dfnCalculateDrinkingWaterLevel(double dDrinkingWaterLevel,

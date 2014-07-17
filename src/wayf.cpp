@@ -2,7 +2,8 @@
 #include <fstream>
 #include <math.h>
 #include "PopulationCalculators.h"
-#include "CalculateDrinkingWaterLevel.h"
+#include "WaterManagementInfrastructureCalculators.h"
+#include "BudgetExpenseCalculators.h"
 
 using namespace std;
 
@@ -69,7 +70,6 @@ float expense;
 float budgetBalance;
 
 void showMainMenu() {
-
 
 
 
@@ -149,31 +149,6 @@ void showCompositionMenu() {
 	cout << "8) Services ($500,000)\n";
 	cout << "9) Nevermind (Return to previous Menu)\n";
 	cout << "What you're decision: " << endl;
-}
-
-void calcDrinkingWaterBudgetNeeds() {
-	float infrastructureRange=100;
-	float drinkingWaterRange=100;
-	float waterCostsRange;
-	float waterInfrastructureCosts;
-	float waterDrinkingWaterCosts;
-	float infrastructureWeight=.5;
-	float drinkingWaterWeight=.5;
-
-	const float waterCostsMax=.02355; // 3000$ for 127000 gallons / year (guatamala city)
-	const float waterCostsMin=.00157; // 200$ for 127000 gallons / year (Washingtondc)
-
-	waterCostsRange=waterCostsMax-waterCostsMin;
-
-
-	//The higher the urban population the lower the birth rate
-	waterInfrastructureCosts=(100-infrastructurePercent)*waterCostsRange*infrastructureWeight/infrastructureRange;
-
-	waterDrinkingWaterCosts=(100-drinkingWaterPercent)*waterCostsRange*drinkingWaterWeight/drinkingWaterRange;
-
-	waterCosts=waterInfrastructureCosts+waterDrinkingWaterCosts;
-
-	drinkingWaterBudgetneeds=waterCosts*36500*populationTotal;
 }
 
 void advanceYear() {
@@ -294,40 +269,35 @@ void advanceYear() {
 	budgetBalance = income - expense;
 }
 
-int main() {
-	bool Quit = false;
-	char mainMove = 'z';
+int main()
+{
+	bool bQuit = false;
+	int iMainMenuSelection;
 	char compositionMove ='z';
 	double displaydrinkingWaterBudget;
 	double displaydrinkingWaterBudgetNeeds;
+
 	cout << fixed;
 	cout.precision(2);
 
-	//0=urban,1=rural,2=agriculture,3=energy,4=Raw Materials,5=Industrial,6=Finished,7=Services  -- rural <2k urbaan >2k < 75k
-	//20=cereals,21=vegetables,22=meat,23=dairy,24=tobacco,25=drugs
-	//30=solar,31=wind,32=natural gas,33=fossil fuels
-	//40=wood,41=minerals,42=iron and steel, 43=precious stones
-	//50=fabrics,51=plastics,52=chemicals,53=pharmaceuticals
-	//60=appliances,61=vehicles,62=machinery,63=commodoties,64=luxury commodoties
-	//70=construction,71=engineering,72=health,73=retail,74=legal,75=marketing
-
-	while(!Quit) {
-
+	while(!bQuit)
+	{
 		showMainMenu();
 
-cin >> mainMove;
+		cin >> iMainMenuSelection;
 
-switch (mainMove) {
-			case '1':
+		switch (iMainMenuSelection)
+		{
+			case 1:
 				break;
-			case '2':
+			case 2:
 				advanceYear();
 				break;
-			case '3':
+			case 3:
 				cout << "What is the new tax rate? 10%=.10: ";
 				cin >> tax;
 				break;
-			case '4':
+			case 4:
 				if ( currentSize < 100 )
 				{
 					showCompositionMenu();
@@ -422,19 +392,20 @@ switch (mainMove) {
 						}
 				}
 				else {
-					cout << "You need to aqquire addition land for your country before you can develope it\n";
+					cout << "You need to aquire addition land for your country before you can develope it\n";
 				}
 				break;
-			case '5':
-				calcDrinkingWaterBudgetNeeds();
+			case 5:
+				drinkingWaterBudgetneeds=dfnDrinkingWaterExpenseCalculator(infrastructurePercent,
+						drinkingWaterPercent, populationTotal);
 				displaydrinkingWaterBudget=floorf(drinkingWaterBudget * 100 + 0.5) / 100;
 				cout << "Water Budget: " << displaydrinkingWaterBudget << "\n";
 				displaydrinkingWaterBudgetNeeds=floorf(drinkingWaterBudgetneeds * 100 + 0.5) / 100;
 				cout << "Water Budget Needs " << displaydrinkingWaterBudgetNeeds << " to maintain current Drinking Water Levels.";
 				cin >> drinkingWaterBudget;
 				break;
-            case '6':
-                Quit = true;
+            case 6:
+                bQuit = true;
                 return 0;
                 break;
 			default:
