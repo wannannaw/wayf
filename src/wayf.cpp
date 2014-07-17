@@ -10,8 +10,8 @@ using namespace std;
 const char* name="Albion";
 int input;
 int Linput;
-float populationKids=20; //0-14
-float populationTeens=20; // 15-24
+/* float populationKids=20; //0-14
+//float populationTeens=20; // 15-24
 float populationPrime=20;//25 - 54
 float populationDecline=20; //55 -64
 float populationRetired=20; //65 +
@@ -68,6 +68,7 @@ float servicesIncome;
 float income;
 float expense;
 float budgetBalance;
+*/
 
 void showMainMenu() {
 
