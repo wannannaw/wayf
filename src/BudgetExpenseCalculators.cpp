@@ -1,5 +1,7 @@
 #include "BudgetExpenseCalculators.h"
 
+using namespace std;
+
 double dfnDrinkingWaterExpenseCalculator(double dInfrastructureLevel, double dDrinkingWaterLevel,
 		double dPopulationTotal)
 {

@@ -10,147 +10,9 @@ using namespace std;
 const char* name="Albion";
 int input;
 int Linput;
-/* float populationKids=20; //0-14
-//float populationTeens=20; // 15-24
-float populationPrime=20;//25 - 54
-float populationDecline=20; //55 -64
-float populationRetired=20; //65 +
-float kidsLifeExpetancyModifier;
-float teensLifeExpetancyModifier;
-float primeLifeExpetancyModifier;
-float declineLifeExpetancyModifier;
-float retiredLifeExpetancyModifier;
-float birthRate;
-int maxSize=100; //square km
-int currentSize;
 int i;
-int composition [8] = {0,1,0,0,0,0,0,0};
-long money=1000000000;
-float mediumIncome=10;
-float tax=.1;
-float urbanPercent;
-float educationPercent=50;
-float infantMortalityRate=.061; //.002-.120
-float religiousAbortion=50;
-float religiousContreception=50;
-bool legalAbortion=0;
-bool legalContreception=0;
-float migrationRate=.005; // 85per 1000  -120 per 1000
-float deathRate=.005; //18per1000 high 2/1000
-float populationBirths;
-float populationKidsAdvance;
-float populationTeensAdvance;
-float populationPrimeAdvance;
-float populationDeclineAdvance;
-float populationDeaths;
-float populationTotal=100;
-float popuplationCrowding;
-float populationMax;
-float populationPercent=0;
-float populationTotalOld;
-float lifeExpectancy;
-float drinkingWaterPercent=0;
-long drinkingWaterBudget=0;
-float sanitationPercent=100;
-float healthCarePercent=100;
-float infrastructurePercent=0;
-float war=1; //1=not war 0=war
-float populationGrowthRate=0;
-long drinkingWaterBudgetneeds;
-float waterCosts;
-float taxIncome;
-float agricultureIncome;
-float energyIncome;
-float rawIncome;
-float industrialIncome;
-float finishedIncome;
-float servicesIncome;
-float income;
-float expense;
-float budgetBalance;
-*/
-
-void showMainMenu() {
 
 
-
-	cout << "Your country " << name << "'s statistics\n\n";
-	float displayPopulationTotal=floorf(populationTotal * 100 + 0.5) / 100;
-	cout << "Population: " << displayPopulationTotal << "\n";
-	float displaypopulationKids=floorf(populationKids * 100 + 0.5) / 100;
-	cout << "\tPopulation 0-14 " << 	displaypopulationKids << "\n";
-	float displaypopulationTeens=floorf(populationTeens * 100 + 0.5) / 100;
-	cout << "\tPopulation 15-24 " << 	displaypopulationTeens << "\n";
-	float displaypopulationPrime=floorf(populationPrime * 100 + 0.5) / 100;
-	cout << "\tPopulation 25-54 " << 	displaypopulationPrime << "\n";
-	float displaypopulationDecline=floorf(populationDecline * 100 + 0.5) / 100;
-	cout << "\tPopulation 55-64 " << 	displaypopulationDecline << "\n";
-	float displaypopulationRetired=floorf(populationRetired * 100 + 0.5) / 100;
-	cout << "\tPopulation 65+ " << 	displaypopulationRetired << "\n";
-	float displayBirthRate=floorf(birthRate * 100 + 0.5) / 100;
-	cout << "\tBirth Rate: " << displayBirthRate << "\n";
-	float displayMigrationRate=floorf(migrationRate * 100 + 0.5) / 100;
-	cout << "\tMigration Rate: " << displayMigrationRate << "\n";
-	cout << "\tPopulation Max: " << populationMax << "\n";
-	cout << "\tPopulation Percent: " << populationPercent << "\n";
-	cout << "\tPopulation Overcrowding: " << popuplationCrowding << "\n";
-	float displayPopulationGrowthRate=floorf(populationGrowthRate * 100 + 0.5) / 100;
-	cout << "\tPopulation Growth Rate: " << displayPopulationGrowthRate << "\n";
-	cout << "\tLife Expectancy :"  << lifeExpectancy << "\n";
-	cout << "Infrastructure Percent: " << infrastructurePercent << "\n";
-	cout << "DrinkingWater Percent: " << drinkingWaterPercent << "\n";
-	double displaymoney=floorf(money * 100 + 0.5) / 100;
-	cout << "Money: " << displaymoney << "\n";
-	cout << "\tTax Rate: " << tax << "\n";
-	float displayincome=floorf(income * 100 + 0.5) / 100;
-	cout << "\tIncome: " << displayincome << "\n";
-	float displaytaxIncome=floorf(taxIncome * 100 + 0.5) / 100;
-	cout << "\t\tTax Income: " << displaytaxIncome << "\n";
-	cout << "\t\tAgriculture Income: " << agricultureIncome << "\n";
-	cout << "\t\tEnergy Income: " << energyIncome << "\n";
-	cout << "\t\tRaw Income: " << rawIncome << "\n";
-	cout << "\t\tIndustrial Income: " << industrialIncome << "\n";
-	cout << "\t\tFinished Income: " << finishedIncome << "\n";
-	cout << "\t\tServices Income: " << servicesIncome << "\n";
-	cout << "\tExpense: " << expense << "\n";
-	cout << "\t\tDrinking Water Expense: " << drinkingWaterBudget << "\n";
-	float displaybudgetBalance=floorf(budgetBalance * 100 + 0.5) / 100;
-	cout << "\tBudget Blance: " << displaybudgetBalance << "\n";
-	cout << "Land\n";
-	cout << "\tMax Size: " << maxSize << " square miles\n";
-	cout << "\tCurrent developed Size: " << currentSize << " square miles\n";
-	cout << "\tUrban: " << composition[0] << "\n";
-	cout << "\tRural: " << composition[1] << "\n";
-	cout << "\tAgriculture: " << composition[2] << "\n";
-	cout << "\tEnergy: " << composition[3] << "\n";
-	cout << "\tRaw Materials: " << composition[4] << "\n";
-	cout << "\tIndustrial: " << composition[5] << "\n";
-	cout << "\tFinished: " << composition[6] << "\n";
-	cout << "\tServices: " << composition[7] << "\n\n\n";
-	cout << "Which of the following do you want to do?\n";
-	cout << "1) Nothing\n";
-	cout << "2) Advance Year\n";
-	cout << "3) Change tax rate\n";
-	cout << "4) Change land Composition\n";
-	cout << "5) Change your water budget\n";
-	cout << "6) Quit\n";
-	cout << "What you're decision: " << endl;
-}
-
-void showCompositionMenu() {
-	cout << "What type of land do you want to develop? \n";
-	cout << "Money: " << money << "\n";
-	cout << "1) Urban (Cost $100,000)\n";
-	cout << "2) Rural (Cost $2,000)\n";
-	cout << "3) Agriculture ($5,000)\n";
-	cout << "4) Energy ($10,000) \n";
-	cout << "5) Raw Materials ($10,000)\n";
-	cout << "6) Industrial ($50,000)\n";
-	cout << "7) Finished ($100,000)\n";
-	cout << "8) Services ($500,000)\n";
-	cout << "9) Nevermind (Return to previous Menu)\n";
-	cout << "What you're decision: " << endl;
-}
 
 void advanceYear() {
 	float populationPrimeMigration=0;
@@ -277,15 +139,16 @@ int main()
 	char compositionMove ='z';
 	double displaydrinkingWaterBudget;
 	double displaydrinkingWaterBudgetNeeds;
+	char cAreaName="Utah";
 
 	cout << fixed;
 	cout.precision(2);
 
+	area Utah;
+
 	while(!bQuit)
 	{
-		showMainMenu();
-
-		cin >> iMainMenuSelection;
+		iMainMenuSelection=showMainMenu(cAreaName, cAreaName.dPopulationTotal);
 
 		switch (iMainMenuSelection)
 		{

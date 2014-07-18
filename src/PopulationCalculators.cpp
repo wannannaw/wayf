@@ -2,7 +2,7 @@
 
 //Function Calculates an Areas birth Rate
 double dfnCalculateBirthRate(double dUrbanizationLevel, double dEducationLevel,
-		double dInfantMortalityLevel, double dLevelOfReligionsForbiddingAbortion,
+		double dInfantMortalityRate, double dLevelOfReligionsForbiddingAbortion,
 		double dLevelOfReligionsForbiddingContreception, bool bIsAbortionLegal,
 		bool bIsContreceptionLegal, double dPopulationCrowdingLevel)
 {
@@ -47,7 +47,7 @@ double dfnCalculateBirthRate(double dUrbanizationLevel, double dEducationLevel,
 	dBrithRateFromEducationLevel = (100 - dEducationLevel) * dBirthRateRange * cdEducationLevelWeight /
 			cdEducationLevelRange;
 	//The higher the infant mortality rate the higher the birth rate
-	dBirthRateFromInfantMortalityLevel = ((dInfantMortalityLevel * 1000) - 2) * dBirthRateRange *
+	dBirthRateFromInfantMortalityLevel = ((dInfantMortalityRate * 1000) - 2) * dBirthRateRange *
 			cdInfantMortalityLevelWeight / cdInfantMortalityLevelRange;
 	//The higher the religious forbidding the lower the higher the birth rate
 	dBirthRateFromLevelOfReligionsForbiddingAbortion = (100 - dLevelOfReligionsForbiddingAbortion) * dBirthRateRange *

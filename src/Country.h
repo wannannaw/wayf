@@ -1,8 +1,8 @@
-class Country
+class country
 {
 		double dTaxRate;
-
+		char cOwnedAreas;
 	public:
-		Country();
-		virtual ~Country();
+		country();
+		virtual ~country();
 };

@@ -1,11 +1,13 @@
 #include "Country.h"
 
-Country::Country() {
+using namespace std;
+
+country::country() {
 	// TODO Auto-generated constructor stub
 
 }
 
-Country::~Country() {
+country::~country() {
 	// TODO Auto-generated destructor stub
 }
 
